@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unwomen.sharepoint.com/sites/developer1/Style%20Library/UNWomen/css/style.css">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://unwomen.sharepoint.com/sites/developer1/Style%20Library/UNWomen/js/topnav.js"></script>
+
+  ::-webkit-scrollbar {
+    width: 5px!important;height:5px!important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  
+    background:#ededed!important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #999!important;border-radius:10px!important;
+}
+
+  h3.MobNavBtn {
+    color: #fff;
+    font-weight: normal;
+    display: none;
+    padding: 10px 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+h3.MobNavBtn ul {
+    margin: 1px 10px 0 0;
+    padding: 0;
+    list-style: none;
+    width: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h3.MobNavBtn ul li {
+    height: 2px;
+    background: #fff;
+    margin: 4px 0;
+}
+
+h3.MobNavBtn span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+    #navbar {
+      background-color: #106d8e;
+      width: 100%;
+      margin-top:-26px;
+    }
+
+    nav {
+      float: left;
+      display: block;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav a {
+      display: block;
+      background: #106d8e;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 30px 15px 20px;
+      font-size: 85%;
+      letter-spacing: 0px;
+      position: relative;
+    }
+
+    .nav {
+      vertical-align: top;
+      display: inline-block;
+
+     
+    }
+
+    .nav li {
+      position: relative;
+    }
+
+    .nav>li {
+      float: left;
+    }
+
+    .nav>li>a {}
+
+    .nav>li:hover,
+    .nav>li:hover>a {
+      border-bottom-color: #106d8e;
+    }
+
+    .nav li:hover>a {
+      color: #fff;
+    }
+
+    .nav>li:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+
+    .nav>li:first-child>a {
+      border-radius: 4px 0 0 0;
+    }
+
+    .nav>li>a:hover {
+      background-color: #168eb9;
+    }
+
+    .nav>li:last-child {
+      border-radius: 0 0 4px 0;
+      margin-right: 0;
+    }
+
+    .nav>li:last-child>a {
+      border-radius: 0 4px 0 0;
+    }
+
+    /* .nav li li a {
+      margin-top: 1px
+    } */
+
+
+
+    
+    .nav li:hover >a{background-color: #168eb9;}
+
+
+
+
+    /* submenu positioning*/
+    .nav ul {
+      position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+    top: 42px;
+    left: -99999em;
+    max-height: 0;
+    /*transition: height 0.5s, opacity 0.3s;*/
+    opacity: 0;
+    }
+
+    .nav ul li a {
+      /* background-color: #168eb9;transition: 0.3s; */
+    }
+    .nav ul li:hover >a{background-color: #117396!important;}
+    .nav ul li a:hover{background-color: #117396;}
+    .nav>li:hover>ul {
+      left: auto;
+    padding-top: 5px;
+    min-width: 100%;
+    max-height: 500px;
+    opacity: 1;
+    }
+
+    .nav>li li ul {
+      /* border-left: 1px solid #fff; */
+    }
+
+
+    .nav>li li:hover>ul {
+      /* margin-left: 1px */
+      left: 100%;
+      max-height:500px;
+      opacity: 1;
+      top: 0;
+    }
+
+    /* arrow hover styling */
+    .nav>li>a:first-child:nth-last-child(2):before {
+      border-top-color: #fff;
+    }
+
+    .nav>li:hover>a:first-child:nth-last-child(2):before {
+      /* border: 5px solid transparent; 
+  border-bottom-color: #106d8e;  
+  margin-top:-5px */
+    }
+
+    .nav li li>a:first-child:nth-last-child(2):before {
+      border-left-color: #fff;
+      margin-top: -3px
+    }
+
+    /* .nav li li:hover>a:first-child:nth-last-child(2):before {
+      border: 5px solid transparent;
+      border-right-color: #106d8e;
+      right: 10px;
+    } */
+
+    * {
+      font-family: "Segoe UI", "Segoe", Helvetica, Arial, sans-serif;
+    }
+    .nav li a span.ClickArrow{right: 10px;position: absolute;}
+
+
+    @media only screen and (max-width: 1400px){
+    .nav > li:nth-last-child(2):hover ul,.nav > li:nth-last-child(1):hover ul,.nav > li:nth-last-child(3):hover ul {
+      left: auto;right: 0;
+    }
+    .nav > li:nth-last-child(2) ul li ul,.nav > li:nth-last-child(1) ul li ul,.nav > li:nth-last-child(3) ul li ul{right: 100%!important;}
+  }
+  
+/* @media only screen and (min-width: 768px) and (max-width: 1260px){
+  #navbar{overflow: hidden;}
+  #myDIVX {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#myDIVX >li {
+    display: inline-block;
+    float: none;
+}
+} */
+  @media only screen and (min-width: 1261px){
+    .nav li ul li a .ClickArrow{        transform: rotate3d(1, 0, -7, 90deg);}
+	}
+  @media only screen and (max-width: 1260px){
+    .nav a.actX{padding-right: 40px;}
+    .nav a.actX.act{border-bottom: 1px solid #105d78;}
+    #navbar ul.nav li:last-child {
+    border: 0;
+}
+.nav a {
+    padding: 10px 30px 10px 20px;
+}
+    .nav li a span.ClickArrow {
+      position: absolute;
+    height: 30px;
+    width: 30px;
+    border-top-color: #fff;
+    top: 9px;
+    right: 10px!important;
+    background: #0b5570!important;
+    text-align: center;
+    line-height: 30px;  z-index: 1;
+    }
+    #navbar ul.nav li ul {
+      position: static;
+    white-space: normal;
+    border-left: 2px solid #105d78;
+    margin: 0 0 0 10px;
+    width: auto;
+
+    opacity: 1;
+    max-height: none;
+    left: auto;
+    right: auto;
+    min-width: 0;
+}
+.ClickArrow{display: block;}
+.nav>li:hover>ul{padding: 0;}
+    #navbar ul.nav {
+      position: fixed;
+    right: -280px;
+    transition: 0.3s;
+    width: 280px;
+    z-index: 99999;
+    bottom: 0;
+    top: 48px;
+    overflow: auto;
+    background: #106d8e;
+}
+#navbar ul.nav.out{right: 0;}
+
+#navbar ul.nav li {
+  float: none;
+}
+h3.MobNavBtn{display: block;}
+  }
+  </style>
+</head>
+
+<body>
+  <div class="topDiv">
+    <nav id="navbar">
+      <h3 onclick="myFunction()" class="MobNavBtn"><ul><li></li><li></li><li></li></ul><span>Home</span></h3>
+      <ul class="nav" id="myDIVX">
+        <li><a href="#">Themes</a>
+          <ul>
+            <li><a href="https://unwomen.sharepoint.com/Beijing">Beijing+25/ Generation Equality</a></li>
+            <li><a href="https://unwomen.sharepoint.com/Policy-Programming/ProgrammeDivision/CF">Corporation Framework</a></li>
+			<li><a href="https://unwomen.sharepoint.com/CSW">CSW</a></li>
+            <li><a href="https://unwomen.sharepoint.com/EWGD">Empowerment of Women & Girl-Disabilities</a></li>
+			<li><a href="https://unwomen.sharepoint.com/SDG_KP">SDG Knowledge Portal</a></li>
+          </ul>
+
+        </li>
+        <li><a href="#">Regions</a>
+          <ul>
+            <li><a href="https://unwomen.sharepoint.com/sites/acs">Americas and Carribean Section</a>
+              <ul>
+                <li><a href="https://unwomen.sharepoint.com/sites/acs/brazil">Brazil</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/acs/barbados">Carribean Multi-Country Office</a></li>
+				<li><a href="https://unwomen.sharepoint.com/Policy-Programming/acs/ColombiaCO">Columbia</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/acs/dominican-republic">Dominican Republic</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/acs/ecuador">Ecuador</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/acs/el-salvador">El Salvador</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/acs/guatemala">Guatemala</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/acs/haiti">Haiti</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/acs/mexico">Mexico</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/acs/panama">Panama</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/acs/paraguay">Paraguay</a></li>
+              </ul>
+            </li>
+            <li><a href="https://unwomen.sharepoint.com/sites/roas">Arab States</a>
+			  <ul>
+                <li><a href="https://unwomen.sharepoint.com/sites/roas/egypt">Egypt</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/roas/iraq">Iraq</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/roas/jordan">Jordan</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/roas/Lebanon">Lebanon</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/roas/morocco">Morocco</a></li>
+				<li><a href="https://unwomen.sharepoint.com/sites/roas/occup-palestinian">Occup Palestinian Terr - Jerusalem</a></li>
+              </ul>
+			</li>
+            <li><a href="https://unwomen.sharepoint.com/sites/roap">Asia and Pacific</a>
+				<ul>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/afghanistan">Afghanistan</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/bangladesh">Bangladesh</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/cambodia">Cambodia</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/china">China - Programme Presence</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/roap/mcofj">Fiji - Multi Country Presence</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/india">India - Multi Country Presence</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/Indonesia">Indonesia</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/Myanmar">Myanmar</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/nepal">Nepal</a></li>
+					
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/roap/pakistan">Pakistan</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/png">Papua New Guinea</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/thailand">Thailand</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/timor-leste">Timor-Leste</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roap/vietnam">Vietnam</a></li>
+					
+              </ul>	
+			</li>
+			<li><a href="https://unwomen.sharepoint.com/sites/roesa">East and Southern Africa</a>
+				<ul>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/burundi">Burundi</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/congo">Congo</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/ethiopia">Ethiopia</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/kenya">Kenya</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/malawi">Malawi</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/mozambique">Mozambique</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/rwanda">Rwanda</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/south-africa">South Africa</a></li>
+					
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/south-sudan">South Sudan</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/sudan">Sudan</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/tanzania">Tanzania</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/uganda">Uganda</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roesa/zimbabwe">Zimbabwe</a></li>
+					
+              </ul>	
+			</li>
+			<li><a href="https://unwomen.sharepoint.com/sites/roeca">Europe and Central Asia</a>
+				<ul>
+					<li><a href="https://unwomen.sharepoint.com/sites/roeca/albania">Albania</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roeca/bosnia">Bosnia and Herzegovina</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roeca/georgia">Georgia</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roeca/kazakhstan">Kazakhstan</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roeca/kyrgystan">Kyrgystan</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roeca/moldova">Moldova</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/roeca/moldova">Turkey</a></li>
+              </ul>	
+			</li>
+			<li><a href="https://unwomen.sharepoint.com/sites/rowca">West and Central Africa</a>
+				<ul>
+					<li><a href="https://unwomen.sharepoint.com/sites/rowca/cameroon">Cameroon</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/rowca/cote-d-ivoire">Cote D'lvoire</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/rowca/liberia">Liberia</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/rowca/mali">Mali</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/rowca/nigeria">Nigeria</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/rowca/senegal">Senegal</a></li>
+					<li><a href="https://unwomen.sharepoint.com/sites/rowca/sierra-leone">Sierra Leone</a></li>
+              </ul>	
+			</li>
+          </ul>
+        </li>
+        
+		 <li><a href="#">Normative Support, UN System Coordination and Programme Results</a>
+          <ul>
+            <li><a href="https://unwomen.sharepoint.com/intergovernmental-support/civilsociety">Civil Society Division</a></li>
+            <li><a href="https://unwomen.sharepoint.com/Policy-Programming/ProgrammeDivision">Policy, Programme Intergovernmental Division</a>
+              <ul>
+			  <li><a href="https://unwomen.sharepoint.com/Policy-Programming/PolicyDiv/EcoEmp">Economic Empowerment</a></li>
+               
+              </ul>
+            </li>
+            <li><a href="https://unwomen.sharepoint.com/Policy-Programming/PolicyDiv/Leadership%20and%20Governance">PPID Directorate</a>
+				<ul>
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/EVAW">Ending Violence Against Women</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/trustfunds/fge">Fund for Gender Equality</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/Innovation_ICT4D">Innovation and Technology</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Intergovernmental-Support">Intergovernmental Support</a></li>
+					<li><a href="https://unwomen.sharepoint.com/KM">KM</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/PolicyDiv/Leadership%20and%20Governance">Leadership and Governance</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/ProgrammeDivision/PAPDU/SitePages/Home.aspx">Political Analysis and Programme Development</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/ProgrammeDivision/PSMU/Pages/Home.aspx">Programme Support and Management Unit</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/Research-Data">Research and Data</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/trustfunds">UN Trust Fund to EVAW</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Intergovernmental-Support">Intergovernmental Support</a></li>
+					<li><a href="https://unwomen.sharepoint.com/Policy-Programming/unwomentc">UN Women Training Center</a></li>
+					
+				</ul>
+			
+			
+			</li>
+          
+          </ul>
+        </li>
+		
+		
+		
+		
+		<li><a href="#">Resource Management, Sustainability and Partnerships</a>
+          <ul>
+            <li><a href="https://unwomen.sharepoint.com/sites/intranet/resource-management-sustainability-and-partnerships/dma-directorate">DMA Directorate</a></li>
+			<li><a href="https://unwomen.sharepoint.com/management/Human-Resources">Human Resources Division</a></li>
+            <li><a href="https://unwomen.sharepoint.com/sites/intranet/resource-management-sustainability-and-partnerships/management-and-administration-division">Management and Administration Division</a>
+              <ul>
+			  <li><a href="https://unwomen.sharepoint.com/management/Finance">Financial Management</a></li>
+                <li><a href="https://unwomen.sharepoint.com/sites/intranet/resource-management-sustainability-and-partnerships/management-and-administration-division/operations">Operations</a>
+                  
+                </li>
+              </ul>
+            </li>
+			
+			 <li><a href="https://unwomen.sharepoint.com/sites/intranet/resource-management-sustainability-and-partnerships/spd-directorate">SPD Directorate</a>
+              <ul>
+			  <li><a href="https://unwomen.sharepoint.com/MSPE">Multi‐Stakeholder Partnerships Engagement Section</a></li>
+                <li><a href="https://unwomen.sharepoint.com/Intergovernmental-Support/Resource-Mobilization">Resource Mobilization</a>
+                  
+                </li>
+              </ul>
+            </li>
+			
+			
+			<li><a href="https://unwomen.sharepoint.com/sites/intranet/resource-management-sustainability-and-partnerships/spred-directorate">SSPRED Directorate</a>
+              <ul>
+			  <li><a href="https://unwomen.sharepoint.com/management/Budget-Management">Budget Unit</a></li>
+                <li><a href="https://unwomen.sharepoint.com/sites/intranet/resource-management-sustainability-and-partnerships/spred-directorate/executive-board-secretariat">Executive Board Secretariat</a>
+                  
+                </li>
+				<li><a href="https://unwomen.sharepoint.com/management/erm">Risk Management</a> </li>
+				<li><a href="https://unwomen.sharepoint.com/SP">Strategic Planning Unit</a></li>                
+              </ul>
+            </li>
+			
+			 <li><a href="https://unwomen.sharepoint.com/sites/intranet/resource-management-sustainability-and-partnerships/strategic-partnerships-division">Strategic Partnerships Division</a>
+              <ul>
+			  <li><a href="https://unwomen.sharepoint.com/Intergovernmental-Support/Communications">Communications and Advocacy</a></li>  
+               
+              </ul>
+            </li>
+			
+			 <li><a href="https://unwomen.sharepoint.com/sites/intranet/resource-management-sustainability-and-partnerships/strategy-planning-resources-and-effectiveness-division">Strategy, Planning, Resources and Effectiveness Division</a>
+              <ul>
+			  <li><a href="https://unwomen.sharepoint.com/management/Audit">Audit Coordination</a></li>  
+               
+              </ul>
+            </li>
+			
+			 <li><a href="https://unwomen.sharepoint.com/Intergovernmental-Support/UNCoordination">UN System Coordination Division</a>
+              <ul>
+			  <li><a href="https://unwomen.sharepoint.com/Intergovernmental-Support/UNCoordination/copongeew">Community of Practice on Coordination</a></li>  
+               
+              </ul>
+            </li>
+			
+			
+           
+          </ul>
+        </li>
+		
+		
+		  <li><a href="#">Executive Direction</a>
+          <ul>
+            <li><a href="https://intra.unwomen.org/USG/CM/">Change Management</a></li>
+            <li><a href="https://unwomen.sharepoint.com/sites/intranet/executive-direction/executive-coordinator-on-sexual-harassment">Executive Coordinator on Sexual Harassment</a></li>
+            <li><a href="https://unwomen.sharepoint.com/executiveoffice">Executive Office</a></li>
+			
+            <li><a href="https://unwomen.sharepoint.com/ExecutiveOffice/IE_AS">Independent Evaluation and Audit Services (IEAS)</a>
+				<ul>
+					<li><a href="https://unwomen.sharepoint.com/Evaluation">Evaluation</a></li>
+					<li><a href="https://unwomen.sharepoint.com/ExecutiveOffice/AS">Internal Audit</a></li>
+				</ul>
+			</li>
+            <li><a href="https://unwomen.sharepoint.com/management/Legal%20Support">Legal Support</a></li>
+			<li><a href="https://unwomen.sharepoint.com/sites/intranet/executive-direction/office-of-the-focal-point-for-women-in-the-un-system-gender-parity">Office of the Focal Point for Women in the UN System/Gender Parity</a></li>
+          </ul>
+
+        </li>
+        <li><a href="https://unwomen.sharepoint.com/COVID19">Covid 19</a></li>
+
+      </ul>
+    </nav>
+  </div>
+ 
+</body>
+
+</html>
